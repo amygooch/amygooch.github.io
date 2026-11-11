@@ -179,6 +179,23 @@ h3 { font-size: 1.25rem; margin: 1.4rem 0 0.4rem; }
 .triptych div figcaption { margin-top: 0.35rem; text-align: center; font-size: 0.85rem; }
 .figure-note { margin-top: 0.45rem; }
 
+.shots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 280px));
+  gap: 1.2rem;
+  margin: 1.2rem 0 0.4rem;
+}
+.shots img {
+  width: 100%;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: white;
+}
+.shots figcaption { margin-top: 0.45rem; }
+.features { margin: 0.4rem 0 0; padding-left: 1.15rem; }
+.features li { margin: 0.35rem 0; }
+
 .wide-figure {
   margin: 1rem 0;
   background: var(--card);
@@ -226,9 +243,10 @@ footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wr
 footer a { color: var(--muted); }
 
 @media (max-width: 800px) {
-  .hero, .cards, .doc-grid, .split, .triptych, .entry {
+  .hero, .cards, .doc-grid, .split, .triptych, .entry, .shots {
     grid-template-columns: 1fr;
   }
+  .shots { max-width: 280px; }
   .portrait { width: min(220px, 60%); }
   .site-header .wrap { align-items: flex-start; flex-direction: column; padding: 0.7rem 0; }
 }
