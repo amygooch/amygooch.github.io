@@ -51,7 +51,7 @@
           <h1>Amy Ashurst Gooch</h1>
           <p class="role">Chief Operations Officer, ViSUS and ViSOAR<br>Salt Lake City, Utah</p>
           <p class="lede">I work on ways to keep the important part of a picture, a model, or a scientific dataset visible when the data is simplified, recolored, or too large to open on an ordinary computer.</p>
-          <p>I earned a B.S. in computer engineering and an M.S. in computer science at the University of Utah, and a Ph.D. in computer science at Northwestern University. The cool-to-warm lighting model from my master’s thesis is the shading method often called Gooch shading. I later co-authored <em>Non-Photorealistic Rendering</em>, then spent seven years on the faculty at the University of Victoria. Since 2013 I have led product and operations at ViSUS, whose software is built so that visualization of massive data stays lightweight enough to run without specialized hardware.</p>
+          <p>I earned a B.S. in computer engineering and an M.S. in computer science at the University of Utah, and a Ph.D. in computer science at Northwestern University. The cool-to-warm lighting model from my master’s thesis, developed with Bruce Gooch, Peter Shirley, and Elaine Cohen, is the shading method often called Gooch shading. I later co-authored <em>Non-Photorealistic Rendering</em> with Bruce Gooch.  I spent seven years on the faculty at the University of Victoria. Since 2013 I have led product and operations at ViSUS LLC, now renamed ViSOAR LLC, whose software is built on top of <a href="https://openvisus.org">OpenVisus</a>, so that visualization of massive data stays lightweight enough to run without specialized hardware.</p>
           <p class="contacts">
             <a href="mailto:amy@visus.net">amy@visus.net</a>
             <a href="https://orcid.org/0000-0002-1612-6674">ORCID</a>
@@ -71,7 +71,7 @@
       <div class="split">
         <article class="panel">
           <h2>Massive scientific data</h2>
-          <p>ViSUS and the National Science Data Fabric work I join now is about opening petascale collections: climate records, dark-matter calibration data, and other scientific archives that are awkward to move and awkward to view. Multiresolution storage, web visualization, and FAIR access are the practical pieces.</p>
+          <p>My work  at ViSOAR LLC with OpenVisus from CEDMAV and the National Science Data Fabric democratizes access to gigbyte to petascale datasets: climate records, dark-matter calibration data, and other scientific archives that are awkward to move and awkward to view. Our focus is on multiresolution storage, web visualization, and FAIR access.</p>
           <p><a href="research.html#data">Read about the current work</a></p>
         </article>
         <article class="panel">
@@ -80,6 +80,23 @@
           <p><a href="research.html#perception">Read about the earlier work</a></p>
         </article>
       </div>
+
+      <h2>Cool-to-warm shading</h2>
+      <figure class="triptych">
+        <div>
+          <img src="images/shading-diffuse.png" alt="Diffuse-shaded model of a claw. The small claws disappear into black, and highlights blow out to white.">
+          <figcaption>Diffuse shading</figcaption>
+        </div>
+        <div>
+          <img src="images/shading-hue.png" alt="The same claw with a hue shift and almost no change in brightness. Edge lines stay visible, and the surface shape is subtle.">
+          <figcaption>Hue only</figcaption>
+        </div>
+        <div>
+          <img src="images/shading-cool-warm.png" alt="The same claw in cool-to-warm shading. Black edge lines, white highlights, and the small claws all stay visible.">
+          <figcaption>Cool-to-warm</figcaption>
+        </div>
+      </figure>
+      <p class="caption figure-note">Diffuse shading loses the small claws in the black and the highlights in the white. A hue shift at nearly constant brightness keeps the edge lines visible, but the curved surfaces stay subtle. Cool-to-warm shading uses both a change in brightness and a blue-to-yellow shift, so the lines, the highlights, and the claws remain visible. Figures 4.13, 4.16, and 4.18 from the 1998 master’s thesis. Amy Gooch, Bruce Gooch, Peter Shirley, and Elaine Cohen published the model at ACM SIGGRAPH 1998.</p>
 
       <h2>Color2Gray</h2>
       <figure class="triptych">
@@ -96,7 +113,7 @@
           <figcaption>Color2Gray</figcaption>
         </div>
       </figure>
-      <p class="caption figure-note">Claude Monet, <em>Impression, Sunrise</em>. A luminance-only grayscale loses the sun and its reflection. Color2Gray folds visible color changes back into the gray image. From Gooch, Olsen, Tumblin, and Gooch, ACM SIGGRAPH 2005. Color image courtesy of Artcyclopedia, as credited in that paper.</p>
+      <p class="caption figure-note">Claude Monet, <em>Impression, Sunrise</em>. A luminance-only grayscale loses the sun and its reflection. Color2Gray folds visible color changes back into the gray image. From Gooch, Olsen, Tumblin, and Gooch, ACM SIGGRAPH 2005.</p>
 
       <h2>Documents</h2>
       <div class="doc-grid">

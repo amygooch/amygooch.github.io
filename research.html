@@ -34,8 +34,8 @@
 
       <section id="data">
         <h2>Massive data, on ordinary machines</h2>
-        <p>The ViSUS software was designed around a simple claim. Visualization of massive data does not have to be tied to specialized hardware or infrastructure. A visualization environment for large data can be lightweight, highly scalable, and able to run on a variety of platforms. As chief operations officer I lead commercialization and development of the ViSUS and ViSOAR products and coordinate the work with our collaborators at universities and national laboratories.</p>
-        <p>The recent papers are about access as much as they are about rendering. With colleagues on the National Science Data Fabric, the work covers web visualization of petascale data, a FAIR framework for analysis, training that uses those services, climate analysis that trades a measured error for a large drop in cost, and the release of a community dark-matter calibration dataset in an open multiresolution format. The shared aim is that a scientist, a student, or a collaborator outside the original instrument team can open the data and see it.</p>
+        <p>The ViSOAR software was designed around a simple claim. Visualization of massive data does not have to be tied to specialized hardware or infrastructure. A visualization environment for large data can be lightweight, highly scalable, and able to run on a variety of platforms. As chief operations officer I lead commercialization and development of  OpenViSUS through ViSOAR and coordinate the work with our collaborators at universities and national laboratories.</p>
+        <p>The recent papers are about access as much as they are about rendering. With colleagues on the National Science Data Fabric, the work covers web visualization of petascale data, a FAIR framework for analysis, training that uses those services, data analysis that trades a measured error for a large drop in cost, and the release of a community datasets in an open multiresolution format. The shared aim is that a scientist, a student, or a collaborator outside the original instrument team can open the data, see the data, and share the results.</p>
         <p>A longer list of those papers is on the <a href="papers.html#data">papers page</a>.</p>
       </section>
 
@@ -43,7 +43,23 @@
         <h2>Illustration, color, and perception</h2>
         <p>Before ViSUS, the same question showed up in pictures. Computer graphics usually maps the color and intensity at a point in a scene to a pixel on a display. People also sense position, orientation, texture, shape, edges, and motion, and they judge those qualities by comparison with what is nearby. A photorealistic image is one kind of mapping. Technical illustration, caricature, and a careful grayscale image are mappings that keep some of those differences and let others go.</p>
         <p>My master’s thesis, with Peter Shirley and Elaine Cohen, built an interactive illustration of NURBS models: silhouettes and edge lines drawn in the spirit of pen and ink, and a cool-to-warm shading of the interior so the black lines stay distinct. That shading is the model later called Gooch shading. Bruce Gooch and I wrote it up with Peter Shirley and Elaine Cohen for SIGGRAPH 1998, and Bruce and I later wrote the book <em>Non-Photorealistic Rendering</em> (A K Peters, 2001).</p>
-        <p>The dissertation, with Jack Tumblin, set the goal in one place: create perceptually salient images by expressing perceived differences in a scene as displayed differences in an image. Two of the cases were Color2Gray, a color-to-grayscale conversion that keeps visible color boundaries, and a method for finding pentimenti, an artist’s hidden revisions, by comparing an X-ray of a painting with a photograph of its surface. The Art Institute of Chicago conservation staff were collaborators on the painting work.</p>
+
+        <figure class="triptych">
+          <div>
+            <img src="images/shading-diffuse.png" alt="Diffuse-shaded model of a claw. The small claws disappear into black, and highlights blow out to white.">
+            <figcaption>Diffuse shading</figcaption>
+          </div>
+          <div>
+            <img src="images/shading-hue.png" alt="The same claw with a hue shift and almost no change in brightness. Edge lines stay visible, and the surface shape is subtle.">
+            <figcaption>Hue only</figcaption>
+          </div>
+          <div>
+            <img src="images/shading-cool-warm.png" alt="The same claw in cool-to-warm shading. Black edge lines, white highlights, and the small claws all stay visible.">
+            <figcaption>Cool-to-warm</figcaption>
+          </div>
+        </figure>
+        <p class="caption figure-note">Diffuse shading hides detail in the black and the white. A hue shift keeps the edge lines, and the cool-to-warm model adds a brightness change so the shape stays readable too. Figures 4.13, 4.16, and 4.18 from the 1998 master’s thesis; the model was published at SIGGRAPH 1998.</p>
+        <p>My dissertation, with Jack Tumblin, set the goal in one place: create perceptually salient images by expressing perceived differences in a scene as displayed differences in an image. I arranged those differences as a matrix whose diagonal is the familiar one-to-one copy, color staying color and shape staying shape. Off that diagonal, an M-to-N mapping draws a difference sensed in one form as a difference in another, such as color as luminance or time as position, so long as the size of the difference is kept. Two of the cases were Color2Gray, a color-to-grayscale conversion that keeps visible color boundaries, and a method for finding pentimenti, an artist’s hidden revisions, by comparing an X-ray of a painting with a photograph of its surface. The Art Institute of Chicago conservation staff were collaborators on the painting work.</p>
 
         <figure class="triptych">
           <div>
