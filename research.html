@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research · Amy Ashurst Gooch</title>
+  <meta name="description" content="Research interests of Amy Ashurst Gooch: petascale scientific visualization, and the perception of computer-generated and modified images.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,480&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Amy Ashurst Gooch</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html" aria-current="page">Research</a>
+        <a href="papers.html">Papers</a>
+        <a href="vita.html">Vita</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="wrap">
+      <p class="kicker">Research interests</p>
+      <h1>What I have been trying to show</h1>
+      <p class="lede">The thread through the work is salience: which differences in a scene, a model, or a dataset should remain visible after the representation changes.</p>
+
+      <section id="data">
+        <h2>Massive data, on ordinary machines</h2>
+        <p>The ViSUS software was designed around a simple claim. Visualization of massive data does not have to be tied to specialized hardware or infrastructure. A visualization environment for large data can be lightweight, highly scalable, and able to run on a variety of platforms. As chief operations officer I lead commercialization and development of the ViSUS and ViSOAR products and coordinate the work with our collaborators at universities and national laboratories.</p>
+        <p>The recent papers are about access as much as they are about rendering. With colleagues on the National Science Data Fabric, the work covers web visualization of petascale data, a FAIR framework for analysis, training that uses those services, climate analysis that trades a measured error for a large drop in cost, and the release of a community dark-matter calibration dataset in an open multiresolution format. The shared aim is that a scientist, a student, or a collaborator outside the original instrument team can open the data and see it.</p>
+        <p>A longer list of those papers is on the <a href="papers.html#data">papers page</a>.</p>
+      </section>
+
+      <section id="perception">
+        <h2>Illustration, color, and perception</h2>
+        <p>Before ViSUS, the same question showed up in pictures. Computer graphics usually maps the color and intensity at a point in a scene to a pixel on a display. People also sense position, orientation, texture, shape, edges, and motion, and they judge those qualities by comparison with what is nearby. A photorealistic image is one kind of mapping. Technical illustration, caricature, and a careful grayscale image are mappings that keep some of those differences and let others go.</p>
+        <p>My master’s thesis, with Peter Shirley and Elaine Cohen, built an interactive illustration of NURBS models: silhouettes and edge lines drawn in the spirit of pen and ink, and a cool-to-warm shading of the interior so the black lines stay distinct. That shading is the model later called Gooch shading. Bruce Gooch and I wrote it up with Peter Shirley and Elaine Cohen for SIGGRAPH 1998, and Bruce and I later wrote the book <em>Non-Photorealistic Rendering</em> (A K Peters, 2001).</p>
+        <p>The dissertation, with Jack Tumblin, set the goal in one place: create perceptually salient images by expressing perceived differences in a scene as displayed differences in an image. Two of the cases were Color2Gray, a color-to-grayscale conversion that keeps visible color boundaries, and a method for finding pentimenti, an artist’s hidden revisions, by comparing an X-ray of a painting with a photograph of its surface. The Art Institute of Chicago conservation staff were collaborators on the painting work.</p>
+
+        <figure class="triptych">
+          <div>
+            <img src="images/sunrise-color.png" alt="Claude Monet’s Impression, Sunrise, in color">
+            <figcaption>Color</figcaption>
+          </div>
+          <div>
+            <img src="images/sunrise-luminance.png" alt="Luminance-only grayscale in which the sun has disappeared">
+            <figcaption>Luminance only</figcaption>
+          </div>
+          <div>
+            <img src="images/sunrise-color2gray.png" alt="Color2Gray grayscale that preserves the sun and reflection">
+            <figcaption>Color2Gray</figcaption>
+          </div>
+        </figure>
+        <p class="caption figure-note">Default grayscale conversion can erase boundaries between colors of similar luminance. Color2Gray puts those perceived boundaries back into a gray image. Monet, <em>Impression, Sunrise</em>; color image courtesy of Artcyclopedia, as credited in the SIGGRAPH 2005 paper.</p>
+
+        <p>Related projects looked at whether the quality of computer graphics changes distance judgments in immersive environments, which cues tell a person that a virtual object is about to touch a surface, how to draw faces so they are learned faster than photographs, and how to abstract a manufactured shape down to the curves that identify it.</p>
+
+        <figure class="wide-figure">
+          <img src="images/abstraction.png" alt="A manufactured shape reduced to a network of characteristic curves">
+          <figcaption>Abstraction of man-made shapes by characteristic curves. Mehra, Zhou, Long, Sheffer, Gooch, and Mitra, ACM SIGGRAPH Asia 2009.</figcaption>
+        </figure>
+      </section>
+
+      <section id="people">
+        <h2>People</h2>
+        <p>Advisors were Peter Shirley and Elaine Cohen at Utah, and Jack Tumblin at Northwestern. Long-running collaborators include Bruce Gooch, William B. Thompson, Sarah Creem-Regehr, Peter Willemsen, and, on the visualization work, Valerio Pascucci and the National Science Data Fabric team.</p>
+        <p>At the University of Victoria my graduate students included Jeremy Long, Anthony Estey, Ji Li, Ryan Wallace, and Shelley Gao, along with undergraduate researchers supported by NSERC and CRA-W. The group’s projects ranged from computational aesthetics and multispectral photography to games that teach a non-human visual system, including a cat-vision simulation and a bee-vision game.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>Amy Ashurst Gooch</span>
+      <span><a href="papers.html">Papers</a> · <a href="vita.html">Vita</a></span>
+    </div>
+  </footer>
+</body>
+</html>
