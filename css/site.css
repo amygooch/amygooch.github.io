@@ -193,6 +193,21 @@ h3 { font-size: 1.25rem; margin: 1.4rem 0 0.4rem; }
   background: white;
 }
 .shots figcaption { margin-top: 0.45rem; }
+
+.montages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin: 1.2rem 0 0.4rem;
+}
+.montages video {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #111;
+  box-shadow: var(--shadow);
+}
+.montages figcaption { margin-top: 0.45rem; }
 .features { margin: 0.4rem 0 0; padding-left: 1.15rem; }
 .features li { margin: 0.35rem 0; }
 
@@ -243,7 +258,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wr
 footer a { color: var(--muted); }
 
 @media (max-width: 800px) {
-  .hero, .cards, .doc-grid, .split, .triptych, .entry, .shots {
+  .hero, .cards, .doc-grid, .split, .triptych, .entry, .shots, .montages {
     grid-template-columns: 1fr;
   }
   .shots { max-width: 280px; }
