@@ -200,6 +200,17 @@ h3 { font-size: 1.25rem; margin: 1.4rem 0 0.4rem; }
   gap: 1.2rem;
   margin: 1.2rem 0 0.4rem;
 }
+.montages figure { margin: 0; }
+.montages.pair {
+  grid-template-columns: repeat(2, 280px);
+  justify-content: start;
+}
+.montages.pair video.portrait {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  max-height: none;
+}
 .montages video {
   width: 100%;
   border-radius: 12px;
@@ -263,7 +274,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wr
 footer a { color: var(--muted); }
 
 @media (max-width: 800px) {
-  .hero, .cards, .doc-grid, .split, .triptych, .entry, .shots, .montages {
+  .hero, .cards, .doc-grid, .split, .triptych, .entry, .shots, .montages, .montages.pair {
     grid-template-columns: 1fr;
   }
   .shots { max-width: 280px; }
