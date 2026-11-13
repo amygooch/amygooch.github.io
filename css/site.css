@@ -98,6 +98,15 @@ h1, h2, h3 {
 
 h1 { font-size: clamp(2.4rem, 5vw, 4.2rem); margin: 0.2rem 0 0.6rem; }
 h2 { font-size: 1.8rem; margin: 2.2rem 0 0.7rem; }
+h2.with-logo a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: inherit;
+  text-decoration: none;
+}
+h2.with-logo a:hover { color: var(--warm); }
+h2.with-logo img { height: 52px; width: auto; margin: 0; }
 h3 { font-size: 1.25rem; margin: 1.4rem 0 0.4rem; }
 
 .kicker {
@@ -235,6 +244,29 @@ h3 { font-size: 1.25rem; margin: 1.4rem 0 0.4rem; }
   padding: 0.8rem;
 }
 .wide-figure img { width: 100%; border-radius: 6px; }
+.video-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  align-items: start;
+  margin: 1.2rem 0 0.4rem;
+}
+.video-pair .wide-figure { margin: 0.6rem 0 0; }
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #111;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
 .entry {
   display: grid;
@@ -274,7 +306,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wr
 footer a { color: var(--muted); }
 
 @media (max-width: 800px) {
-  .hero, .cards, .doc-grid, .split, .triptych, .entry, .shots, .montages, .montages.pair {
+  .hero, .cards, .doc-grid, .split, .triptych, .entry, .shots, .montages, .montages.pair, .video-pair {
     grid-template-columns: 1fr;
   }
   .shots { max-width: 280px; }
